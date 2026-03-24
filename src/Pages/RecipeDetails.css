@@ -1,0 +1,138 @@
+.page-center {
+  display: flex;
+  justify-content: center;   
+  align-items: center;      
+  min-height: 100vh;    
+}
+.recipe-details {
+  display: flex;
+  flex-direction: column;    
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+}
+
+
+.recipe-details img {
+  width: 50%;
+  max-width: 700%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  align-self: center;
+}
+
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+
+.details-content h1 {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin: 0;
+  line-height: 1.2;
+}
+
+
+.details-content .time {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+
+.details-content h3 {
+  margin-top: 1rem;
+  color: #ff6f61;
+}
+
+
+.details-content ul {
+  padding-left: 1.5rem;
+}
+
+
+.details-content .instructions {
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  content: center;
+}
+
+
+.fav-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+}
+
+.fav-btn:hover {
+  background-color: #ff4c3b;
+}
+
+
+.details-msg {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff6f61;
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .recipe-details {
+    padding: 1rem;
+  }
+
+  .details-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .details-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-details {
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+
+  .details-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .details-content h3 {
+    font-size: 1rem;
+  }
+
+  .details-content p,
+  .details-content li {
+    font-size: 0.9rem;
+  }
+}
+.fav-btn.remove {
+  background-color: #888; /* gray for remove */
+}
+
+.fav-btn.remove:hover {
+  background-color: #555;
+}
