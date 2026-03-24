@@ -136,3 +136,37 @@
 .fav-btn.remove:hover {
   background-color: #555;
 }
+
+.page-center.dark {
+  background-color: #121212;
+}
+
+.dark-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-card h1,
+.dark-card h3 {
+  color: #ffffff;
+}
+
+.dark-card .time {
+  color: #ccc;
+}
+
+.dark-card ul li {
+  color: #ddd;
+}
+
+.dark-card .instructions {
+  color: #e0e0e0;
+}
+
+.dark-card .fav-btn {
+  background-color: #ff4d6d;
+}
+
+.dark-card .fav-btn.remove {
+  background-color: #888;
+}

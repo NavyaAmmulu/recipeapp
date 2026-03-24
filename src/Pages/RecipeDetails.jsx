@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FavoritesContext } from "./FavoritesContext";
+import { ThemeContext } from "../context/ThemeContext";
 import "./RecipeDetails.css";
 
 const DEFAULT_RECIPES = [
@@ -37,6 +38,8 @@ function RecipeDetails() {
 
   const { favorites, addToFavorites, removeFromFavorites } =
     useContext(FavoritesContext);
+
+  const { darkMode } = useContext(ThemeContext); // 🌙 Theme
 
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -96,9 +99,9 @@ function RecipeDetails() {
     );
 
   return (
-    <div className="page-center">
-      <div className="recipe-details">
-
+    <div className={`page-center ${darkMode ? "dark" : ""}`}>
+      <div className={`recipe-details ${darkMode ? "dark-card" : ""}`}>
+        
         <img src={recipe.image} alt={recipe.title} />
 
         <div className="details-content">
@@ -112,7 +115,6 @@ function RecipeDetails() {
           {error && <p style={{ color: "red" }}>{error}</p>}
 
           {/* INGREDIENTS */}
-
           <h3>Ingredients</h3>
 
           <ul>
@@ -127,7 +129,6 @@ function RecipeDetails() {
           </ul>
 
           {/* INSTRUCTIONS */}
-
           <h3>Instructions</h3>
 
           {recipe.instructions ? (
@@ -142,7 +143,6 @@ function RecipeDetails() {
           )}
 
           {/* FAVORITE BUTTON */}
-
           {isFavorite ? (
             <button
               className="fav-btn remove"
